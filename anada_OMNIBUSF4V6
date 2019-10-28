@@ -1,0 +1,80 @@
+# Betaflight / STM32F405 (S405) 4.1.0 Oct  6 2019 / 06:47:09 (c6452a55c) MSP API: 1.42
+# manufacturer_id: AIRB   board_name: OMNIBUSF4V6   custom defaults: YES
+
+# start the command batch
+batch start
+
+board_name OMNIBUSF4V6
+manufacturer_id AIRB
+
+# name: trojanGoat
+
+# resources
+resource MOTOR 1 B01
+resource MOTOR 2 B05
+resource MOTOR 3 B00
+resource MOTOR 4 A03
+
+# feature
+feature MOTOR_STOP
+feature TELEMETRY
+feature RSSI_ADC
+feature ESC_SENSOR
+
+# beacon
+beacon RX_SET
+
+# serial
+serial 1 2048 115200 57600 0 115200
+serial 3 1024 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1300 2100 0 0
+aux 1 27 2 1700 2100 0 0
+aux 2 13 1 1700 2100 0 0
+aux 3 35 3 1700 2100 0 0
+aux 4 36 2 1300 1700 0 0
+aux 5 39 3 900 1300 0 0
+
+# rxfail
+rxfail 4 s 750
+
+# master
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set acc_hardware = NONE
+set mag_hardware = NONE
+set baro_hardware = NONE
+set serialrx_provider = FPORT
+set serialrx_halfduplex = ON
+set blackbox_device = NONE
+set dshot_idle_value = 350
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set failsafe_delay = 0
+set failsafe_switch_mode = KILL
+set failsafe_throttle_low_delay = 0
+set bat_capacity = 1100
+set current_meter = ESC
+set small_angle = 180
+set deadband = 2
+set yaw_deadband = 2
+set pid_process_denom = 1
+set transient_throttle_limit = 10
+set osd_warn_core_temp = OFF
+set osd_cap_alarm = 1100
+set osd_tim2 = 2577
+set osd_tim_2_pos = 2067
+set osd_craft_name_pos = 2049
+set osd_warnings_pos = 2378
+set osd_avg_cell_voltage_pos = 2409
+set osd_disarmed_pos = 2283
+set osd_esc_tmp_pos = 2417
+set debug_mode = GYRO_SCALED
+set vcd_video_system = NTSC
+set gyro_1_align_yaw = 1800
+set name = trojanGoat
+
+profile 0
+
+rateprofile 0
